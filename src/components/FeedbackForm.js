@@ -9,7 +9,7 @@ const FeedbackForm = () => {
     script.onload = () => {
       new window.formsapp('65da3e26cd824c8379e235d7', 'popup', {
         'overlay': 'rgba(45,45,45,0.5)',
-        'button': {'color':'#ff9e24','text':'Are Are ye kya hai ! ?'},
+        'button': {'color':'#ff9e24','text':'Feedback?'},
         'width': '800px',
         'height': '600px',
         'openingAnimation': {'entrance':'animate__bounceIn','exit':'animate__bounceOut'}
