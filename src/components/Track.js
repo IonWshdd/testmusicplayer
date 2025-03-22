@@ -225,7 +225,7 @@ const Track = () => {
       </div>
       <div className='mt-8 text-center'>
         <p className="text-xl">Now playing: <span className="text-blue-400">{bullySongsData[currentSongIndex].song_name}</span></p>
-        <p className="text-lg">by <span className="text-blue-400">{songsData[currentSongIndex].artist_name}</span></p>
+        <p className="text-lg">by <span className="text-blue-400">{bullySongsData[currentSongIndex].artist_name}</span></p>
       </div>
       <div className="flex items-center w-4/5 max-w-6xl mt-4">
         <span className="text-xs text-gray-400">{formatTime(currentTime)}</span>
