@@ -1,6 +1,6 @@
 export const songsData = [
     {
-        song_name: "Alag Aasmaan",
+        song_name: "MELROSE",
         song_length: "5:29",
         artist_name: "Kanye West, Ty Dolla $ign, Playboi Carti",
         movie_name: "",
