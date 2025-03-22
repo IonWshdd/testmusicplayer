@@ -5,7 +5,7 @@ export const songsData = [
         artist_name: "Kanye West, Ty Dolla $ign, Playboi Carti",
         movie_name: "",
         genre: "hip-hop",
-        song_url: "https://pillowcase.su/f/1fc5b5f4e7993fca56093b9eba620d33",
+        song_url: "https://res.cloudinary.com/dywggoioe/video/upload/f_auto:video,q_auto/MELROSE",
         cover_image_url: "https://lh7-rt.googleusercontent.com/sheetsz/AHOq17FBjw5DT9RXwgUgAaYXxQAn4XyLOv_w_39DSTTaqRtewYIFnDSZMwa_cxUZkdAbAEcdea2qAN29DHZ9e6-l27UG18lrnAKXEg0aH_kTsEMGKcSBTTS-HJ6THtYc3wxL?key=vFIW87Iq3I6Uh5WJGSWtug"
     },
     {
