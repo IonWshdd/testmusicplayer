@@ -13,7 +13,7 @@ const formatTime = (seconds) => {
   return new Date(seconds * 1000).toISOString().substr(14, 5);
 };
 
-const Bully = () => {
+const Track = () => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLooping, setIsLooping] = useState(false);
