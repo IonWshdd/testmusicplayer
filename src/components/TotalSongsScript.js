@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { bullySongsData } from '../constants/bullysongs.js';
+import { songsData } from '../constants/bullysongs.js';
 
 const TotalSongsScript = () => {
     const skills = useMemo(() => [
