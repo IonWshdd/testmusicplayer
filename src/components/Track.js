@@ -54,7 +54,7 @@ const Track = () => {
   
     // Set src only if it's different to avoid reloading
     if (currentAudio.src !== bullySongsData[currentSongIndex].song_url) {
-      currentAudio.src = songsData[currentSongIndex].song_url;
+      currentAudio.src = bullySongsData[currentSongIndex].song_url;
       // Once the source is set, the loadeddata event will fire, indicating the media is ready to play.
       // We leverage this event to attempt playback, ensuring it respects the autoplay policy.
       currentAudio.addEventListener('loadeddata', tryPlay);
