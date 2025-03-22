@@ -3,7 +3,7 @@ import { bullySongsData } from '../constants/bullysongs.js';
 
 const TotalSongsScript = () => {
     const skills = useMemo(() => [
-        `Geet now boasts a vibrant collection of ${songsData.length} songs.`,
+        `Geet now boasts a vibrant collection of ${bullySongsData.length} songs.`,
         "Discover diverse tunes for every mood."
     ], []); // Dependency array is empty, indicating it only runs once on mount
 
