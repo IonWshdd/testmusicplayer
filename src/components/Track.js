@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { songsData } from '../constants/bullysongs.js';
+import { bullySongsData } from '../constants/bullysongs.js';
 import FeedbackForm from './FeedbackForm.js';
 import { FaVolumeDown } from "react-icons/fa";
 import { FaVolumeUp } from "react-icons/fa";
@@ -37,7 +37,7 @@ const Track = () => {
 
   const onSongEnd = useCallback(() => {
     if (!isLooping) {
-      setCurrentSongIndex((prevIndex) => (prevIndex < songsData.length - 1 ? prevIndex + 1 : 0));
+      setCurrentSongIndex((prevIndex) => (prevIndex < bullySongsData.length - 1 ? prevIndex + 1 : 0));
     }
   }, [isLooping]);
 
@@ -53,7 +53,7 @@ const Track = () => {
     };
   
     // Set src only if it's different to avoid reloading
-    if (currentAudio.src !== songsData[currentSongIndex].song_url) {
+    if (currentAudio.src !== bullySongsData[currentSongIndex].song_url) {
       currentAudio.src = songsData[currentSongIndex].song_url;
       // Once the source is set, the loadeddata event will fire, indicating the media is ready to play.
       // We leverage this event to attempt playback, ensuring it respects the autoplay policy.
@@ -101,11 +101,11 @@ const Track = () => {
   }, [isPlaying]);
 
   const nextSongHandler = useCallback(() => {
-    setCurrentSongIndex((prevIndex) => (prevIndex < songsData.length - 1 ? prevIndex + 1 : 0));
+    setCurrentSongIndex((prevIndex) => (prevIndex < bullySongsData.length - 1 ? prevIndex + 1 : 0));
   }, []);
 
   const prevSongHandler = useCallback(() => {
-    setCurrentSongIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : songsData.length - 1));
+    setCurrentSongIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : bullySongsData.length - 1));
   }, []);
 
   const toggleLoopHandler = useCallback(() => {
@@ -131,7 +131,7 @@ const Track = () => {
       return;
     }
 
-    const filteredSongs = songsData.filter((song) =>
+    const filteredSongs = bullySongsData.filter((song) =>
       song.song_name.toLowerCase().includes(query.toLowerCase())
     );
 
@@ -139,7 +139,7 @@ const Track = () => {
   };
 
   const selectSongFromSearch = (index) => {
-    const songIndex = songsData.findIndex((song) => song.song_name === searchResults[index].song_name);
+    const songIndex = bullySongsData.findIndex((song) => song.song_name === searchResults[index].song_name);
     setCurrentSongIndex(songIndex);
     setSearchQuery('');
     setSearchResults([]);
@@ -195,7 +195,7 @@ const Track = () => {
       {/* Conditional rendering for the songs list */}
       {showSongsList && (
         <div className="w-full max-w-md bg-gray-700 mb-4 rounded overflow-hidden">
-          {songsData.map((song, index) => (
+          {bullySongsData.map((song, index) => (
             <div
               key={index}
               className="text-white p-2 hover:bg-gray-600 cursor-pointer"
@@ -224,7 +224,7 @@ const Track = () => {
         </button>
       </div>
       <div className='mt-8 text-center'>
-        <p className="text-xl">Now playing: <span className="text-blue-400">{songsData[currentSongIndex].song_name}</span></p>
+        <p className="text-xl">Now playing: <span className="text-blue-400">{bullySongsData[currentSongIndex].song_name}</span></p>
         <p className="text-lg">by <span className="text-blue-400">{songsData[currentSongIndex].artist_name}</span></p>
       </div>
       <div className="flex items-center w-4/5 max-w-6xl mt-4">
