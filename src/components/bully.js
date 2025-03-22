@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { songsData } from '../constants/data.js';
+import { songsData } from '../constants/bullysongs.js';
 import FeedbackForm from './FeedbackForm.js';
 import { FaVolumeDown } from "react-icons/fa";
 import { FaVolumeUp } from "react-icons/fa";
@@ -13,7 +13,7 @@ const formatTime = (seconds) => {
   return new Date(seconds * 1000).toISOString().substr(14, 5);
 };
 
-const Track = () => {
+const Bully = () => {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLooping, setIsLooping] = useState(false);
