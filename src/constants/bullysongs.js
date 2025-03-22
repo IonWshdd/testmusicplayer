@@ -1,4 +1,4 @@
-export const songsData = [
+export const { songsData } = [
     {
         song_name: "PREACHER MAN",
         song_length: "3:06",
