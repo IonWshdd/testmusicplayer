@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { bullySongsData } from '../constants/bullysongs.js';
+import { songsData } from '../constants/bullysongs.js';
 import FeedbackForm from './FeedbackForm.js';
 import { FaVolumeDown } from "react-icons/fa";
 import { FaVolumeUp } from "react-icons/fa";
@@ -37,7 +37,7 @@ const Track = () => {
 
   const onSongEnd = useCallback(() => {
     if (!isLooping) {
-      setCurrentSongIndex((prevIndex) => (prevIndex < bullySongsData.length - 1 ? prevIndex + 1 : 0));
+      setCurrentSongIndex((prevIndex) => (prevIndex < songsData.length - 1 ? prevIndex + 1 : 0));
     }
   }, [isLooping]);
 
@@ -53,8 +53,8 @@ const Track = () => {
     };
   
     // Set src only if it's different to avoid reloading
-    if (currentAudio.src !== bullySongsData[currentSongIndex].song_url) {
-      currentAudio.src = bullySongsData[currentSongIndex].song_url;
+    if (currentAudio.src !== songsData[currentSongIndex].song_url) {
+      currentAudio.src = songsData[currentSongIndex].song_url;
       // Once the source is set, the loadeddata event will fire, indicating the media is ready to play.
       // We leverage this event to attempt playback, ensuring it respects the autoplay policy.
       currentAudio.addEventListener('loadeddata', tryPlay);
@@ -101,11 +101,11 @@ const Track = () => {
   }, [isPlaying]);
 
   const nextSongHandler = useCallback(() => {
-    setCurrentSongIndex((prevIndex) => (prevIndex < bullySongsData.length - 1 ? prevIndex + 1 : 0));
+    setCurrentSongIndex((prevIndex) => (prevIndex < songsData.length - 1 ? prevIndex + 1 : 0));
   }, []);
 
   const prevSongHandler = useCallback(() => {
-    setCurrentSongIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : bullySongsData.length - 1));
+    setCurrentSongIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : songsData.length - 1));
   }, []);
 
   const toggleLoopHandler = useCallback(() => {
@@ -139,7 +139,7 @@ const Track = () => {
   };
 
   const selectSongFromSearch = (index) => {
-    const songIndex = bullySongsData.findIndex((song) => song.song_name === searchResults[index].song_name);
+    const songIndex = songsData.findIndex((song) => song.song_name === searchResults[index].song_name);
     setCurrentSongIndex(songIndex);
     setSearchQuery('');
     setSearchResults([]);
