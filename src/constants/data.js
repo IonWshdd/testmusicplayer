@@ -1,12 +1,12 @@
 export const songsData = [
     {
         song_name: "Alag Aasmaan",
-        song_length: "3:32",
-        artist_name: "Anuv Jain",
+        song_length: "5:29",
+        artist_name: "Kanye West, Ty Dolla $ign, Playboi Carti",
         movie_name: "",
-        genre: "romantic",
-        song_url: "https://res.cloudinary.com/daqtelfvl/video/upload/v1708354823/Geet/Songs/AlagAasmaan-AnuvJain.mp3",
-        cover_image_url: ""
+        genre: "hip-hop",
+        song_url: "https://pillowcase.su/f/1fc5b5f4e7993fca56093b9eba620d33",
+        cover_image_url: "https://lh7-rt.googleusercontent.com/sheetsz/AHOq17FBjw5DT9RXwgUgAaYXxQAn4XyLOv_w_39DSTTaqRtewYIFnDSZMwa_cxUZkdAbAEcdea2qAN29DHZ9e6-l27UG18lrnAKXEg0aH_kTsEMGKcSBTTS-HJ6THtYc3wxL?key=vFIW87Iq3I6Uh5WJGSWtug"
     },
     {
         song_name: "Baarishein",
